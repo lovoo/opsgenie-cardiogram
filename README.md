@@ -4,9 +4,42 @@
 
 **Simple Heartbeat Reporter for Opsgenie**
 
-## Building
+## Run
 
-    make build
+```
+# Plain
+./opsgenie-cardiogram -config /path/to/config.yml
+
+# Docker (default config.yml expected in /data)
+docker run -d --name opsgenie-cardiogram -v /dir/to/config:/data lovoo/opsgenie-cardiogram:latest
+```
+
+## Configuration
+
+```
+# default heartbeat api
+url: https://api.opsgenie.com/v1/json/heartbeat/send
+# generated api key from opsgenie integration
+api_key: "oases-nairy-uncini-jawed-guglet-areca-azured"
+# timeout for http client
+timeout: 10s
+# interval for sending the heartbeat
+interval: 1m
+targets:
+  -
+    # name of the configured heartbeat
+    name: Google
+    # url to test for the heartbeat
+    url: https://www.google.com/
+    # expected response status code
+    status_code: 200
+```
+
+## Build
+
+```
+make build
+```
 
 ## Contributing
 
