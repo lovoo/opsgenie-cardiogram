@@ -1,0 +1,9 @@
+url: https://api.opsgenie.com/v1/json/heartbeat/send
+api_key: "oases-nairy-uncini-jawed-guglet-areca-azured"
+timeout: 10s
+interval: 1m
+targets:
+  -
+    name: Google
+    url: https://www.google.com/
+    status_code: 200
