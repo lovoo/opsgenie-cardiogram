@@ -7,4 +7,7 @@ RUN apk add --update -t build-deps go git mercurial libc-dev gcc libgcc \
     && cd $APPPATH && go get -d && go build -o /opsgenie-cardiogram \
     && apk del --purge build-deps && rm -rf $GOPATH
 
+VOLUME /data
+
 ENTRYPOINT ["/opsgenie-cardiogram"]
+CMD ["-config", "/data/config.yml"]
