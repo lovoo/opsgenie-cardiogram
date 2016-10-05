@@ -1,6 +1,6 @@
 # Opsgenie Cardiogram
 
-[![Build Status](https://travis-ci.org/lovoo/opsgenie-cardiogram.svg?branch=master)](https://travis-ci.org/lovoo/opsgenie-cardiogram)
+[![Build Status](https://travis-ci.org/lovoo/opsgenie-cardiogram.svg?branch=master)](https://travis-ci.org/lovoo/opsgenie-cardiogram) [![Docker Automated Build](https://img.shields.io/docker/automated/lovoo/opsgenie-cardiogram.svg)](https://hub.docker.com/r/lovoo/opsgenie-cardiogram/)
 
 **Simple Heartbeat Reporter for Opsgenie**
 
