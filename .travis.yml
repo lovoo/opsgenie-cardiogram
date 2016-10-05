@@ -5,3 +5,23 @@ go:
 script:
   - make build
   - make test
+
+before_deploy: make release-build
+
+deploy:
+  provider: releases
+  api_key:
+    secure: nY7fdtOuN5FnmBjJxp7rEC+3KBtw6DB4TDsYsfQHSRL/R2gLWZ/faavCR4/w+uel4bo6fv/dPMsJDrT9ljiQG4GW8ghucKhixs2zfSwh2GSr55EKwxvJ5UNCyW+sdAiD5bY9DnLwk+3ZKwfDUkvc5oJs7FL45SB1LaVAgyEuGXTROk2MqTJGkpGe1JIJAB3SNclIgKMoil41QJZnaR/uFyKH5jdXTO7NjfdXvj4XVi+kxostFFmewFpqSgiLFRcNOOJqeZoIdN6DdRiFcymviYOlBdFztCE+9BH6nMt1c0HOingfDLDNjzD1RtaZk/3V/Vn34SmIze9NjW1rEhIVeimhibkGDyrTbRMyBIl8eC5RU2AmYtiqtq7SamRPJt/8KknVY8Tmtrzme/wipDQW1GC2ODzh4vUgTLdP/CqbL3WnmQAjVijAAjfSxRaxyJurovzUeND58fyci+4F2IqkQgv6A7XxkHWAYjN4JYunQfzkfiW+Swj5LbUEMfNEEGQ06uPgykXhYTEG1z7fL0o9E6n+yANYm4x1JFmLhS1NerIO+aI37OmhDwo+DQAB6F2cvBfaXKy+MpSZ+lPfiLaWNUdb7c7E6ADuxDBWqF5aVA6n0DS3oMKjh6g3LYONeFuQuXJPMN/nLb3brm2LXCJO9EbE4QPaSKkw4kkEwRFQBqk=
+  file:
+    - build/opsgenie-cardiogram_darwin_amd64
+    - build/opsgenie-cardiogram_freebsd_386
+    - build/opsgenie-cardiogram_freebsd_amd64
+    - build/opsgenie-cardiogram_linux_386
+    - build/opsgenie-cardiogram_linux_amd64
+    - build/opsgenie-cardiogram_linux_arm
+    - build/opsgenie-cardiogram_linux_arm64
+    - build/opsgenie-cardiogram_windows_386.exe
+    - build/opsgenie-cardiogram_windows_amd64.exe
+  on:
+    repo: lovoo/opsgenie-cardiogram
+    tags: true

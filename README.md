@@ -1,5 +1,7 @@
 # Opsgenie Cardiogram
 
+[![Build Status](https://travis-ci.org/lovoo/opsgenie-cardiogram.svg?branch=master)](https://travis-ci.org/lovoo/opsgenie-cardiogram)
+
 **Simple Heartbeat Reporter for Opsgenie**
 
 ## Building
